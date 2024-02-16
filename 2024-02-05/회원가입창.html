@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          .container{
+            text-align: center;
+            
+        }
+        .popbox{
+            width: 530px;
+            height: 620px;
+            background-color: #565969;
+            position: absolute;
+            padding-left: 95px;
+            padding-top: 75px;
+            border-radius: 10px;
+            color:#fff;
+            z-index: -10;
+            
+            
+        }
+        
+        
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.3s ease;
+
+            z-index: 9999;
+        }
+        .popbox>.popup-content {
+            width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            color:black;
+        }
+        .popup-content h2 {
+            text-align: left;
+            margin-top: 5px;
+            margin-left: 3px;
+        }
+        .popup-content form {
+            display: flex;
+            flex-direction: column;
+            font-weight: 700;
+            font-style: bold;
+        }
+        .popup-content input[type="text"],
+        .popup-content input[type="password"],
+        .popup-content input[type="email"],
+        .popup-content select {
+            margin-bottom: 10px;
+            padding: 8px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            margin-bottom: 30px;
+            background-color:#ccc;
+            opacity: 0.7;
+           
+        }
+  
+        .popup-contet input[type="submit1"]{
+            padding: 8px 12px;
+            border: none;
+            border-radius: 3px;
+            background-color: greenyellow;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            position: relative;
+        }
+
+
+        .popup-content input[type="submit"]:hover {
+            background-color: #303f9f;
+        }
+        .popup-content .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+        .btnbox{
+            width: 100px;
+            height: 40px;
+            background-color: rgb(0, 102, 255);
+            color: #fff;
+            border-radius: 10px;
+        }
+      
+        .pbox1{
+           text-decoration:underline;
+           color:#303f9f;
+           display: inline;
+           white-space:nowrap;
+            font-weight: normal;
+            }
+        
+        .subbox{
+           text-align: center;
+           display: flex;
+           flex-wrap: wrap;
+        }
+        .subbox>.sub1{
+            width: 195px;
+            height: 50px;
+           
+   
+        }
+        .subbox>.sub2{
+            width: 195px;
+            height: 50px;
+    
+        }
+        .popup-content input[type="submit"] {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 3px;
+            background-color: red;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            position: relative; 
+            text-align: center;
+            padding-left: 70px;
+        }
+        .popup-content input[class=sub2] {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 3px;
+            background-color: green;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            position: relative; 
+            text-align: center;
+            padding-left: 70px;
+            opacity: 0.8;
+        }
+        
+        .nobox{
+            border:1px solid rgba(255  , 255, 255, 0.5) ;
+            width: 400px;
+            background-color: #ccc;
+            margin-bottom: 22px;
+        }
+        .close-btn{
+            color: #fff;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        form>p{
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+  <h1>회원가입</h1>
+    <button class="btnbox" onclick="openPopup()">회원가입</button>
+</div>
+
+	<div id="popup" class="popup-overlay">
+        <div class="popbox">
+        
+		<div class="popup-content">
+			<span class="close-btn" onclick="closePopup()">&times;</span>
+			<h2>회원가입</h2>
+            <p> 아래 내용을 채워주세요.</p>
+            
+            <div class="nobox"></div>
+			<form>
+                <span> 이메일</span>
+                <input type="email" placeholder="Email Email">
+                <span>비밀번호</span>
+				<input type="password" placeholder="Enter Password">
+                <span>비밀번호 확인</span>
+                <input type="password" placeholder="Repeat Password">
+                <label><input type="checkbox" name="remember" value="ramember">Remember me</label>
+                </inpit>
+                <p><span class="pbox1">가입정보</span> 정책에 동의합니다.</p>
+              <div class="subbox">
+				<input type="submit" class="sub1"  value="Cancel">
+                <input type="submit" class="sub2" value="회원가입">
+            </div>
+            
+			</form>
+		</div>
+    </div>
+	</div>
+    
+</body>
+</html>
+<script>
+	function openPopup() {
+		var popup = document.getElementById("popup");
+		popup.style.visibility = "visible";
+		popup.style.opacity = "1";
+	}
+
+	function closePopup() {
+		var popup = document.getElementById("popup");
+		popup.style.visibility = "hidden";
+		popup.style.opacity = "0";
+	}
+</script>
+    
+</body>
+</html>

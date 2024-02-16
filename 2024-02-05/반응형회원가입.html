@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 회원가입</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<body>
+   
+
+    <div class="container">
+        <h1>반응형 회원가입폼</h1>
+        <p> 800px 기준으로 반응하는 회원가입을 작성</p>
+    <div class="box">
+
+        <div class="box1">
+            <h2>Billing Address</h2>
+                <p><i class="ri-user-fill"></i>이름</p>
+                <input type="text" name="name" placeholder="채경철" >
+                <p> <i class="ri-mail-fill"></i>이메일</p>
+                <input type="email" name="email" placeholder="corudwls33@naver.com">
+                <p>시,도   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp 우편번호</p>
+                <input type="address" name="city" placeholder="NY"> &nbsp &nbsp &nbsp &nbsp 
+                <input type="address" name="city" placeholder="10011">
+
+                <p><i class="ri-home-4-fill"></i>주소</p>
+                <input type="tel" name="address" placeholder="New York">
+
+                <p>전화번호</p>
+                <input type ="tel" namet="tel" placeholder="000 0000 0000" >
+          
+        </div>
+
+
+        <div class="box1">
+            <h2>Payment</h2>
+            <p>카드</p>
+            <p class="cardlist">
+                <i class="ri-visa-fill" color=""></i>
+                <i class="ri-vip-fill"></i>
+                <i class="ri-bank-card-fill"></i>
+                <i class="ri-wallet-line"></i>
+            </p>
+            <p>카드 종류</p>
+            <input type ="text" name="name" placeholder="chae kyung chul">
+            <p> 카드번호</p>
+            <input type="number" name="card" placeholder="1111-2222-3333-4444">
+            <p>Exp Month</p>
+            <input type="text" name="month" placeholder="September">
+            <p>Exp Year</p>
+            <input type="address" name="date" placeholder="2018"> &nbsp &nbsp &nbsp &nbsp 
+            <input type="address" name="cvv" placeholder="352">
+        </div>
+       
+     
+       <!--------cartbox------>
+      
+       <div class="cartbox">
+        <ul><h4>Cart  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  <i class="ri-shopping-cart-fill"></i> 4       </h4>
+            <li><span class="pbox1">Product 1</span>  &nbsp &nbsp &nbsp  $15</li>
+            <li><span class="pbox1">Product 2</span>  &nbsp &nbsp &nbsp &nbsp $5</li>
+            <li><span class="pbox1">Product 3 </span>  &nbsp &nbsp &nbsp &nbsp $8</li>
+            <li><span class="pbox1">Product 4</span>  &nbsp &nbsp &nbsp &nbsp $2</li>
+           </ul>
+           <div class="barbox">&nbsp</div>
+           <div class="libox">
+           <ul > Total &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  <span class="ul1">$30</span></ul>
+        </div>
+    </div>
+
+    <!----------checkout --------->
+    <div class="box2">
+        <label><input type="checkbox" name="Shipping" value="Shipping">Shipping address same billing </input></label>
+    
+       <div class="outbox">
+          <input type="submit" class="outbox1"  value="Continue to checkout">
+       </div>
+   
+</div>
+    </div>
+    </div> 
+    </div>
+
+    
+</body>
+</html>
